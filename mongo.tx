@@ -1,0 +1,16 @@
+To run the server:
+1. create mongo.config in C:\mongodb\
+2. create empty folders "log" and "data" in C:\mongodb\
+3. Open cmd, goto Mongo DB\bin, run :
+prompt>mongod --config C:\mongodb\mongo.config
+4. The server has started, do not close this window.
+
+To create collections in mogo:
+1. Open cmd
+2. Goto MongoDB\bin
+3. run "mongo", mongo shell appears
+4. run the following commands as it is to setup the db:
+	a. use cms
+	b. db.customers.createIndex({"email":1},{unique:true})
+	c. db.customers.save({"userName":"Admin","password":"password","email":"admin@gmail.com","role":'A',"userStatus":true,"mobileNumber":"9876543210"})
+5. Now the db is ready for the application
